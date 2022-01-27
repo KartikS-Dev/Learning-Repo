@@ -20,7 +20,7 @@ AVG(cast(replace(replace(revenue_earned,",",""),"$","")as float)) as avg_revenue
 count(movie_name)as movies_released,
 less_Making_Movies.total_movies_made_less
 from movies
-Right Join 
+inner Join 
 less_Making_Movies On
 YEAR(movies.release_date) = less_Making_Movies.year
 group by year
