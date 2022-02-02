@@ -2,7 +2,7 @@
 """
 Created on Tue Feb  1 21:29:42 2022
 
-@author: offic
+@author: kARTIK
 """
 from functools import reduce
 
