@@ -1,0 +1,54 @@
+---
+title: "PenguinsReport"
+author: "Kartik"
+date: "10/02/2022"
+output: html_document
+---
+
+
+## Setting up environment
+
+Notes: setting up environment by loading the 'tidyverse' and 'palmerpenguins' packages.
+
+```{r loading packages, message=TRUE, warning=FALSE, paged.print=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## ploting penguins data as flipper_lenght vs body_mass
+```{r}
+ggplot(data = penguins)+ 
+  # this code initializes the plot with 0,0
+  #+ sign is used to add layers to plot
+  # geom_point tell the function to plot using points
+  # AES is property that tell the position , color ,size or shape
+  # mapping tells R what aesthetics to use for the plot 
+  # x and y are the axes
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g))
+```
+
+
+## ploting with segregation of species using color
+```{r}
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x= flipper_length_mm,y=body_mass_g,color=species))
+```
+
+
+
+## ploting with segregation of species using shape
+```{r}
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x= flipper_length_mm,y=body_mass_g,shape=species))
+```
+
+
+
+## ploting with segregation of species using shape and color
+```{r}
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x= flipper_length_mm,y=body_mass_g,color=species,
+                           shape=species))
+```
+
+
