@@ -48,4 +48,6 @@
   print(nested_function('Kartik'))
   adder<-add_function(5) # here adder is also a function 
   print(adder(3)) #value assigned to adder is passed to inner function because add_function returned the function itself 
+
+  
   
